@@ -1,4 +1,5 @@
 import java.sql.Time;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
 
@@ -7,14 +8,14 @@ public class FileInfo {
     private String extension;
     private Atributs atr;
     private int size;
-    private Map<Date, Time> creationDateTime;
+    // Date creationDateTime;
 
-    protected FileInfo(String name, String extension, Atributs atr, int size, Map<Date, Time> creationDateTime) {
+    protected FileInfo(String name, String extension, Atributs atr, int size) {
         this.name = name;
         this.extension = extension;
         this.atr = atr;
         this.size = size;
-        this.creationDateTime = creationDateTime;
+        //this.creationDateTime = creationDateTime;
     }
 
     @Override
@@ -24,7 +25,6 @@ public class FileInfo {
                 ", extension='" + extension + '\'' +
                 ", atr=" + atr +
                 ", size=" + size +
-                ", creationDateTime=" + creationDateTime +
                 '}';
     }
 }
